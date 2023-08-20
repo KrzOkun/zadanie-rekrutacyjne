@@ -2,17 +2,25 @@
   color: black;
 }
 
-.display-2 {
-  font-size: 3vw;
-}
-
-.display-6 {
-  font-size: 1vw;
-}
-
 #intro {
-  margin: 0;
   background-color: rgb(220,193,171);
+  color: white;
+}
+
+.card-link {
+  color: green;
+}
+
+#oferta {
+  background-color: #F5F0EC;
+}
+
+#ofirmie {
+  background-color: #1B5B31;
+}
+
+.icon-offer {
+  width: 3em;
 }
 
 #searchInput {
@@ -32,7 +40,7 @@
 }
 
 .green-white {
-  background-color: green;
+  background-color: #1B5B31;
   border-color: green;
   color: white;
 }
@@ -50,24 +58,20 @@
 }
 
 .greenborder:hover {
-  background-color: green;
+  background-color: #1B5B31;
   border-color: white;
   color: white;
 }
 
-.right-section {
-  overflow:hidden;
-}
-
-@media screen and (orientation: portrait) and (max-width: 1000px) {
-  .img-outside {
-    width: 100%;
-  }
+.right-offer {
+  background-color: #1B5B31;
+  color: white;
 }
 /* Karuzela intro */
 .slaidNav {
   float: right;
   left: -2vw;
+  background-color: red;
 }
 
 @media screen and (orientation: portrait) and (max-width: 1000px) {

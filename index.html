@@ -9,16 +9,21 @@
 
         <!-- Style -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 
         <!-- Skrypty -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <script src="js/myscripts.js"></script>
     </head>
     <body>
         <nav id="navbar" class="navbar px-7 mb-3">
-            <a class="navbar-brand" href="#intro"><b>giard</b>design</a>
+            
+            <nav class="navbar p-0">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#intro"><b>giard</b>design</a>
+                </div>
+              </nav>
             <ul class="nav nav-pills">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle myNav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Oferta</a>
@@ -45,39 +50,49 @@
                 </li>
             </ul>
         </nav>
-        <div>
+        <div class="container-fluid p-0">
             
             <!-- 
                 Sekcja intro <Slider>
             -->
             
-            <section id="intro" class="container-fluid">
+            <section id="intro" class="">
                 <div class="row">
                     <!-- 
                         Intro informacje
                     -->
-                    <div class="col text-center">
-                        <div class="w-100">
-                            <div class="display-2 mb-xl-5"><b>Nowoczesna aranżacja Twojego ogrodu</b></div>
-                            <p class="display-6 mb-xl-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
-                            <div class="row container">
-                                <button type="button" class="btn btn-primary mx-5 my-1 col green-white display-6 rounded-5 w-auto">Skontaktuj się z nami</button>
-                                <button type="button" class="btn btn-primary mx-5 my-1 col greenborder display-6 rounded-5">Zobacz nasze realizacje <i class="bi bi-arrow-down"></i></button>
-                            </div>
+                    <div class="col d-flex text-center flex-column justify-content-center align-items-center">
+                        <div class="display-2 mb-xl-5"><b>Nowoczesna aranżacja Twojego ogrodu</b></div>
+                        <p class="display-6 mb-xl-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+                        <div class="row container">
+                            <button type="button" class="btn btn-primary mx-5 my-1 col green-white display-6 rounded-5 w-auto">Skontaktuj się z nami</button>
+                            <button type="button" class="btn btn-primary mx-5 my-1 col greenborder display-6 rounded-5">Zobacz nasze realizacje <i class="bi bi-arrow-down"></i></button>
                         </div>
                     </div>
                     <!-- 
                         Intro slajder
                     -->
-                    <div class="col right-section">
-                        <!--
-                            Kontener karuzeli
-                        -->
-                        <div class="carousel-container">
-                            <img src="img/intro/bridge.jpg" class="img-outside"/>
+                    <div class="col overflow-hidden">
+                        <div class="carousel-container carousel slide" data-bs-ride="carousel" id="gardencarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item carousel-image active">
+                                    <img src="img/intro/bridge_1920.jpg" class="img-outside"/>
+                                </div>
+                                <div class="carousel-item carousel-image">
+                                    <img src="img/intro/cosmos_1920.jpg" class="img-outside"/>
+                                </div>
+                                <div class="carousel-item carousel-image">
+                                    <img src="img/intro/garden_1920.jpg" class="img-outside"/>
+                                </div>
+                            </div>
+                            
                             <div class="slaidNav position-relative">
-                                <a class="prev position-absolute end-0 p-4" onclick="plusSlides(-1)"><i class="bi bi-arrow-left"></i></a>
-                                <a class="next position-absolute start-0 p-4" onclick="plusSlides(1)"><i class="bi bi-arrow-right"></i></a>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#gardencarousel" data-bs-slide="prev">
+                                    <span class="bi bi-arrow-left" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#gardencarousel" data-bs-slide="right">
+                                    <span class="bi bi-arrow-right" aria-hidden="true"></span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -85,31 +100,139 @@
             </section>
             
             <section id="oferta">
-                <div class="container my-5" style="width: 50%;">
+                <div class="container py-5">
                     <div clas="row w-50">
-                        <small class="text-sm">Oferta</small>
+                        <small class="text-sm display-6" style="color: green;">Oferta</small>
                         <p class="display-2"><b>Działamy <i>kompleksowo</i></b></p>
                         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
                     </div>
-                    <div clas="row"></div>
+                    <div class="row row-cols-2 d-inline-flex">
+                        <div class="card col me-5" style="width: 18rem;">
+                            <img src="img/icons/pencil.png" class="card-img-top icon-offer" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title display-6">Projekty</h5>
+                                <p class="card-text">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Dowiedz się więcej 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card col me-5" style="width: 18rem;">
+                            <img src="img/icons/eye.png" class="card-img-top icon-offer" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title display-6">Wizualizacje</h5>
+                                <p class="card-text">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Dowiedz się więcej 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card col" style="width: 18rem;">
+                            <img src="img/icons/stars.png" class="card-img-top icon-offer" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title display-6">Realizacje</h5>
+                                <p class="card-text">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
+                            </div>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Dowiedz się więcej 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section id="ofirmie">
-                O firmie
-                <p>...</p>
+                <div class="row">
+                    <div class="col">
+                        <img src="img/intro/bridge_1920.jpg" class="img-fluid" style=""/>
+                    </div>
+
+                    <div class="col col-sm-7">
+                        <small class="text-sm display-6" style="color: white;">O firmie</small>
+                        <div class="display-2 mb-xl-5"><b>Tworzymy z pasją</b></div>
+                        <p class="display-6 mb-xl-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+                        <div class="row container">
+                            <button type="button" class="btn btn-primary mx-5 my-1 col border border-white bg-transparent display-6 rounded-5 w-auto">Poznaj nas bliżej</button>
+                        </div>
+                    </div>
+                  </div>
             </section>
             
-            <section id="realizacje">
-                Realizacje
+            <section id="realizacje" style="background-color: #F5F0EC;">
+                <small class="text-sm display-6" style="color: white;">Realizacje</small>
                 <p>...</p>
             </section>
-            <section id="kontakt">
-                Kontakt
-                <p>...</p>
+
+            <section id="kontakt" >
+                <div class="row m-5" style="background-color: #1B5B31;">
+                    <div class="col d-flex text-light display-2 flex-column justify-content-center align-items-center">
+                        <span>Zostańmy w kontakcie! Znajdziesz nas na <b><i>Instagramie</i></b>.</span>
+                    </div>
+                    <div class="col d-flex text-light flex-column justify-content-center align-items-center">
+                        <p>Śledź nasze najnowsze realizacje!</p>
+                        <button type="button" class="btn btn-light" style="--bs-btn-color: #1B5B31">Instagram</button>
+                    </div>
+                </div>
             </section>
             
-          </div>
+            <footer id="footer" class="text-light bg-black">
+                <div class="clearfix container">
+                    <div class="row d-flex py-5">
+                        <div class="col display-6" style="font-size: calc(1.375rem + 0.1vw);"><b>giard</b>design</div>
+                        <div clas="col ms-auto" style="width: auto;">Daj znać, co możemy dla Ciebie zrobić! <button type="button" class="btn btn-primary green-white rounded-5 px-3 py-2 ms-3">Skontaktuj się z nami</button></div>
+                    </div>
+
+                    <hr class="opacity-100 my-3">
+
+                    <div class="row">
+                        <nav id="navbar" class="navbar">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#kontakt">Kontakt</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tel:000000000">000-000-000</a>
+                                </li>
+                                <li class="nav-item float-end">
+                                    <a class="nav-link" href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="row d-flex">
+                        <div class="col">Prawa zastrzeżone © 2022</div>
+
+                        <div class="col">
+                            <img src="img/icons/madeby.png" alt="" class="float-end" />
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
 
           
@@ -138,5 +261,12 @@
                 }
             });
         </script>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     </body>
 </html>
