@@ -1,8 +1,85 @@
 .myNav {
-    color: black;
+  color: black;
+}
+
+.display-2 {
+  font-size: 3vw;
+}
+
+.display-6 {
+  font-size: 1vw;
 }
 
 #intro {
-    margin: 0;
-    background-color: rgb(220,193,171);
+  margin: 0;
+  background-color: rgb(220,193,171);
+}
+
+#searchInput {
+  width: 0;
+  display: none;
+  height: 24px;
+}
+
+@keyframes openSearch {
+  from { width: 0%; }
+  to { width: 80%; }
+}
+
+@keyframes closeSearch {
+  from { width: 80%; }
+  to { width: 0%; }
+}
+
+.green-white {
+  background-color: green;
+  border-color: green;
+  color: white;
+}
+
+.green-white:hover, .green-white:active, .green-white:target {
+  background-color: inherit;
+  border-color: green;
+  color: green;
+}
+
+.greenborder {
+  border-color: green;
+  color: green;
+  background-color: inherit;
+}
+
+.greenborder:hover {
+  background-color: green;
+  border-color: white;
+  color: white;
+}
+
+.right-section {
+  overflow:hidden;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1000px) {
+  .img-outside {
+    width: 100%;
+  }
+}
+/* Karuzela intro */
+.slaidNav {
+  float: right;
+  left: -2vw;
+}
+
+@media screen and (orientation: portrait) and (max-width: 1000px) {
+  .slaidNav {
+    float: right;
+    left: -2vw;
+  }
+}
+
+.prev, .next {
+  cursor: pointer;
+  color: black;
+  background-color: #F5F0EC;
+  bottom: 10%;
 }

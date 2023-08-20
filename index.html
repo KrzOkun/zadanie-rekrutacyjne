@@ -17,8 +17,8 @@
         <script src="js/myscripts.js"></script>
     </head>
     <body>
-        <nav id="navbar" class="navbar px-10 mb-3">
-            <a class="navbar-brand" href="#"><b>giard</b>design</a>
+        <nav id="navbar" class="navbar px-7 mb-3">
+            <a class="navbar-brand" href="#intro"><b>giard</b>design</a>
             <ul class="nav nav-pills">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle myNav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Oferta</a>
@@ -38,19 +38,61 @@
                     <a class="nav-link myNav" href="#kontakt">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link myNav" href="#kontakt"><i class="bi bi-search"></i></a>
+                    <div class="nav-link myNav">
+                        <input type="text" class="myNav input-sm searchbox" id="searchInput"></input>
+                        <label for="searchInput"><i class="bi bi-search searchbox-button" id="searchButton"></i></label>
+                    </div>
                 </li>
             </ul>
-          </nav>
-          <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true" class="scrollspy-example bg-light rounded-2" tabindex="0">
-            <section id="intro">
-                Nowoczesna aranżacja Twojego ogrodu
-                <p>...</p>
+        </nav>
+        <div>
+            
+            <!-- 
+                Sekcja intro <Slider>
+            -->
+            
+            <section id="intro" class="container-fluid">
+                <div class="row">
+                    <!-- 
+                        Intro informacje
+                    -->
+                    <div class="col text-center">
+                        <div class="w-100">
+                            <div class="display-2 mb-xl-5"><b>Nowoczesna aranżacja Twojego ogrodu</b></div>
+                            <p class="display-6 mb-xl-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+                            <div class="row container">
+                                <button type="button" class="btn btn-primary mx-5 my-1 col green-white display-6 rounded-5 w-auto">Skontaktuj się z nami</button>
+                                <button type="button" class="btn btn-primary mx-5 my-1 col greenborder display-6 rounded-5">Zobacz nasze realizacje <i class="bi bi-arrow-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 
+                        Intro slajder
+                    -->
+                    <div class="col right-section">
+                        <!--
+                            Kontener karuzeli
+                        -->
+                        <div class="carousel-container">
+                            <img src="img/intro/bridge.jpg" class="img-outside"/>
+                            <div class="slaidNav position-relative">
+                                <a class="prev position-absolute end-0 p-4" onclick="plusSlides(-1)"><i class="bi bi-arrow-left"></i></a>
+                                <a class="next position-absolute start-0 p-4" onclick="plusSlides(1)"><i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
             </section>
             
             <section id="oferta">
-                Oferta
-                <p>...</p>
+                <div class="container my-5" style="width: 50%;">
+                    <div clas="row w-50">
+                        <small class="text-sm">Oferta</small>
+                        <p class="display-2"><b>Działamy <i>kompleksowo</i></b></p>
+                        <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
+                    </div>
+                    <div clas="row"></div>
+                </div>
             </section>
 
             <section id="ofirmie">
@@ -68,5 +110,33 @@
             </section>
             
           </div>
+
+
+          
+        <script>
+            var searchButton = document.getElementById('searchButton');
+            let searchClicked = false;
+
+            var inputBox = document.getElementById('searchInput');
+
+            searchButton.addEventListener('click', function handleClick() {
+                if ( !searchClicked ) {
+                    searchClicked = true;
+                    //inputBox.classList.add('searchbox-open');
+                    inputBox.style.display = "inline-block";
+                    inputBox.style.animation = "openSearch 0.2s linear 1";
+                    setTimeout( function() {
+                        inputBox.style.width = '80%';
+                    }, 200);
+                } else {
+                    searchClicked = false;
+                    //inputBox.classList.remove('searchbox-open');
+                    inputBox.style.animation = "closeSearch 0.2s linear 1";
+                    setTimeout( function() {
+                        inputBox.style.display = "none";
+                    }, 200);
+                }
+            });
+        </script>
     </body>
 </html>
