@@ -9,52 +9,58 @@
 
         <!-- Style -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-        <link rel="stylesheet" type="text/css" href="css/mystyles.css">
         <link rel="stylesheet" href="css/simple-lightbox.min.css">
+        <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 
 
         <!-- Skrypty -->
-        <script src="js/myscripts.js"></script>
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
         <script src="js/simple-lightbox.min.js"></script>
     </head>
     <body>
-        <nav id="navbar" class="navbar px-7 mb-3">
-            
-            <nav class="navbar p-0">
+        <!--
+            NAWIGACJA
+        -->
+        <nav id="navbar" class="navbar px-5">
+            <nav class="navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#intro"><b>giard</b>design</a>
                 </div>
-              </nav>
+            </nav>
             <ul class="nav nav-pills">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle myNav" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Oferta</a>
+                    <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Oferta
+                    </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#scrollspyHeading3">Projekty</a></li>
-                        <li><a class="dropdown-item" href="#scrollspyHeading4">Wizualizacje</a></li>
-                        <li><a class="dropdown-item" href="#scrollspyHeading5">Realizacje</a></li>
+                      <li><a class="dropdown-item" href="#oferta_projekty">Projekty</a></li>
+                      <li><a class="dropdown-item" href="#oferta_wizualizacje">Wizualizacje</a></li>
+                      <li><a class="dropdown-item" href="#oferta_realizacje">Realizacje</a></li>
                     </ul>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="#ofirmie">O firmie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link myNav" href="#ofirmie">O firmie</a>
+                    <a class="nav-link text-black" href="#realizacje">Realizacje</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link myNav" href="#realizacje">Realizacje</a>
+                    <a class="nav-link text-black" href="#kontakt">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link myNav" href="#kontakt">Kontakt</a>
-                </li>
-                <li class="nav-item">
-                    <div class="nav-link myNav">
-                        <input type="text" class="myNav input-sm searchbox" id="searchInput"></input>
-                        <label for="searchInput"><i class="bi bi-search searchbox-button" id="searchButton"></i></label>
-                    </div>
+                    <form class="d-flex" role="search" onclick="return false;">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Szukaj..." aria-label="Search">
+                        <button class="btn" type="submit" id="searchButton"><i class="bi bi-search searchbox-button"></i></button>
+                    </form>
                 </li>
             </ul>
         </nav>
+        <!--
+
+            CONTENT STRONY
+        -->
         <div class="container-fluid p-0">
             <!-- 
                 SEKCJA INTRO
@@ -100,19 +106,13 @@
                                     </svg>
                                 </button>
                             </div>
-                            <!--div class="slaidNav position-relative bg-danger h-50">
-                                <button class="carousel-control-prev" type="button" data-bs-target="#gardencarousel" data-bs-slide="prev">
-                                    <span class="bi bi-arrow-left" aria-hidden="true"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#gardencarousel" data-bs-slide="right">
-                                    <span class="bi bi-arrow-right" aria-hidden="true"></span>
-                                </button>
-                            </div-->
                         </div>
                     </div>
                   </div>
             </section>
-            
+            <!--
+                SEKCJA OFERTA
+            -->
             <section id="oferta">
                 <div class="container py-5">
                     <div clas="row row-cols-8">
@@ -121,7 +121,7 @@
                         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
                     </div>
                     <div class="row row-cols-4 d-inline-flex">
-                        <div class="card col me-5" style="width: 18rem;">
+                        <div class="card col mx-5 mt-5 rounded-5" style="width: 18rem;" id="oferta_projekty">
                             <img src="img/icons/pencil.png" class="card-img-top icon-offer mt-5 ms-3" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title display-6-5">Projekty</h5>
@@ -135,7 +135,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="card col me-5" style="width: 18rem;">
+                        <div class="card col mx-5 mt-5 rounded-5" style="width: 18rem;" id="oferta_wizualizacje">
                             <img src="img/icons/eye.png" class="card-img-top icon-offer mt-5 ms-3" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title display-6-5">Wizualizacje</h5>
@@ -149,7 +149,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="card col" style="width: 18rem;">
+                        <div class="card col mx-5 mt-5 rounded-5" style="width: 18rem;" id="oferta_realizacje">
                             <img src="img/icons/stars.png" class="card-img-top icon-offer mt-5 ms-3 stars" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title display-6-5">Realizacje</h5>
@@ -166,7 +166,9 @@
                     </div>
                 </div>
             </section>
-
+            <!-- 
+                SEKCJA O FIRMIE
+            -->
             <section id="ofirmie">
                 <div class="row">
                     <div class="col position-relative">
@@ -174,15 +176,15 @@
                     </div>
 
                     <div class="col col-sm-7">
-                        <div class="text-sm display-7 text-white">O firmie</div>
-                        <div class="display-2 mb-xl-5 text-white"><b>Tworzymy z pasją</b></div>
-                        <p class="display-7 mb-xl-5 text-white">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
+                        <div class="text-sm display-7 m-5 text-white">O firmie</div>
+                        <div class="display-2 mb-xl-5 mx-xl-5 text-white"><b>Tworzymy z <i>pasją</i></b></div>
+                        <p class="display-7 mb-xl-5 mx-xl-5 text-white">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
                         <div class="row container">
-                            <button type="button" class="btn btn-primary mx-5 my-1 col border border-white bg-transparent display-6 rounded-5 w-100">Poznaj nas bliżej
+                            <a href="#kontakt" class="btn btn-primary btn-intro mx-5 my-1 col border border-white bg-transparent display-6 rounded-5 w-100">Poznaj nas bliżej
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                     </svg>
-                            </button>
+                                </a>
                         </div>
                     </div>
                   </div>
@@ -193,7 +195,7 @@
             <section id="realizacje" style="background-color: rgb(220,193,171);">
                 <div class="display-7 mx-5 pt-5" style="color: green;">Realizacje</div>
                 <div class="display-2 mb-xl-5 pb-5 px-5">Nasze <b><i>projekty</i></b></div>
-                <div id="isotope-grid" class="container col-md-12 w-100">
+                <div id="isotope-grid" class="container col-md-12 d-flex">
                     <div class="grid-item grid-item--height2" href="img/gallery/Photo_1.png"><img src="img/gallery/Photo_1.png" class="img-fluid"/></div>
                     <div class="grid-item" href="img/gallery/Photo_2.png"><img src="img/gallery/Photo_2.png" class="img-fluid"/></div>
                     <div class="grid-item grid-item--height2" href="img/gallery/Photo_3.png"><img src="img/gallery/Photo_3.png" class="img-fluid"/></div>
@@ -203,24 +205,24 @@
                     <div class="grid-item grid-item--height2" href="img/gallery/Photo_7.png"><img src="img/gallery/Photo_7.png" class="img-fluid"/></div>
                     <div class="grid-item" href="img/gallery/Photo_8.png"><img src="img/gallery/Photo_8.png" class="img-fluid"/></div>
                     <div class="grid-item" href="img/gallery/Photo_9.png"><img src="img/gallery/Photo_9.png" class="img-fluid"/></div>
-
-                    <div class="position-absolute bottom-0 start-25-c">
+                    <div class="position-absolute bottom-0 start-25-c z-3">
                         <button type="button" class="btn btn-primary btn-intro mx-5 my-1 col border-black display-6 rounded-5 text-black bg-transparent" id="rozwin">Rozwiń <i class="bi bi-arrow-down"></i></button>
                     </div>
                 </div>
+                
             </section>
             <!--
                 SEKCJA KONTAKT
             -->
             <section id="kontakt" >
                 <div class="row container p-5 m-md-5" style="background-color: #1B5B31;">
-                    <div class="col d-flex flex-wrap text-light text-wrap display-5 text-center p-5 align-items-center justify-content-center">
-                        <p class="">Zostańmy w kontakcie!</p>
-                        <p>Znajdziesz nas na <b><i>Instagramie</i></b>.</p>
+                    <div class="col d-flex flex-wrap text-light text-wrap display-5 p-5">
+                        <p class="text-start">Zostańmy w kontakcie!</p>
+                        <p class="text-start">Znajdziesz nas na <b><i>Instagramie</i></b>.</p>
                     </div>
                     <div class="col d-flex text-light flex-column justify-content-center align-items-center">
-                        <p>Śledź nasze najnowsze realizacje!</p>
-                        <button type="button" class="btn btn-light rounded-5 p-2 px-3" style="--bs-btn-color: #1B5B31">Instagram</button>
+                        <p class="w-50 text-center">Śledź nasze najnowsze realizacje!</p>
+                        <a href="https://www.instagram.com/" target="_blank" class="btn btn-light btn-intro rounded-5 p-2 px-3" style="--bs-btn-color: #1B5B31">Instagram</a>
                     </div>
                 </div>
             </section>
@@ -230,7 +232,7 @@
             <footer id="footer" class="text-light bg-black">
                 <div class="clearfix container">
                     <div class="row d-flex py-5">
-                        <div class="col display-6" style="font-size: calc(1.375rem + 0.1vw);"><b>giard</b>design</div>
+                        <a class="col display-6" style="font-size: calc(1.375rem + 0.1vw);"><b>giard</b>design</div>
                         <div clas="col ms-auto" style="width: auto;">Daj znać, co możemy dla Ciebie zrobić! <button type="button" class="btn btn-primary green-white rounded-5 px-3 py-2 ms-3">Skontaktuj się z nami</button></div>
                     </div>
 
@@ -240,24 +242,24 @@
                         <nav id="navbar" class="navbar">
                             <ul class="nav nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#kontakt">Kontakt</a>
+                                    <a class="nav-link text-white" href="#kontakt">Kontakt</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+                                    <a class="nav-link text-white" href="https://www.instagram.com/" target="_blank">Instagram</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+                                    <a class="nav-link text-white" href="https://www.facebook.com/" target="_blank">Facebook</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                                    <a class="nav-link text-white" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
                                 </li>
                             </ul>
                             <ul class="nav nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="tel:000000000">000-000-000</a>
+                                    <a class="nav-link text-white" href="tel:000000000">000-000-000</a>
                                 </li>
                                 <li class="nav-item float-end">
-                                    <a class="nav-link" href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+                                    <a class="nav-link text-white" href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
                                 </li>
                             </ul>
                         </nav>
@@ -273,14 +275,11 @@
                 </div>
             </footer>
         </div>
-
-
-          
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 // Inicjalizacja Isotope
-                var isoContainer = document.getElementById("isotope-grid");
-                var isotope = new Isotope(isoContainer, {
+                const isoContainer = document.getElementById("isotope-grid");
+                const isotope = new Isotope(isoContainer, {
                     itemSelector: '.grid-item',
                     masonry: {
                         columnWidth: 0,
@@ -292,36 +291,45 @@
                     isotope.layout();
                 });
 
+                // Próba naprawienia rozsypanego Isotope...
                 document.addEventListener("load", function() {
                     isotope.reloadItems();
                     isotope.layout();
                 });
+                
+                const lightbox = new SimpleLightbox('.grid-item');
+                const expandButton = document.getElementById("rozwin");
 
-                var lightbox = new SimpleLightbox('.grid-item');
-
-                var expandButton = document.getElementById("rozwin");
                 expandButton.addEventListener("click", function() {
-                    var newItemsHTML = `
-                    <div class="grid-item" href="img/gallery/Photo_9.png"><img src="img/gallery/Photo_9.png" alt="Nowa Realizacja 1" class="img-fluid"></div>
-                    <div class="grid-item" href="img/gallery/Photo_9.png"><img src="img/gallery/Photo_9.png" alt="Nowa Realizacja 2" class="img-fluid"></div>
+                    const arr = [];
+                    arr[0] = Math.floor(Math.random() * 9) + 1;
+                    arr[1] = Math.floor(Math.random() * 9) + 1;
+                    arr[2] = Math.floor(Math.random() * 9) + 1;
+
+                    const newItemsHTML = `
+                    <div class="grid-item" href="img/gallery/Photo_` + arr[0] + `.png"><img src="img/gallery/Photo_` + arr[0] + `.png" alt="Nowa Realizacja 1" class="img-fluid"></div>
+                    <div class="grid-item" href="img/gallery/Photo_` + arr[1] + `.png"><img src="img/gallery/Photo_` + arr[1] + `.png" alt="Nowa Realizacja 2" class="img-fluid"></div>
+                    <div class="grid-item" href="img/gallery/Photo_` + arr[2] + `.png"><img src="img/gallery/Photo_` + arr[2] + `.png" alt="Nowa Realizacja 2" class="img-fluid"></div>
                     `;
 
                     isoContainer.insertAdjacentHTML("beforeend", newItemsHTML);
-
-                    var newItems = isoContainer.querySelectorAll(".grid-item");
-                    isotope.appended(newItems);
-                    isotope.reloadItems();
-                    isotope.layout();
+                    const newItems = isoContainer.querySelectorAll(".grid-item");
+                    imagesLoaded( isotope, function() {
+                        isotope.appended(newItems);
+                        isotope.reloadItems();
+                        isotope.layoutItems(newItems);
+                        isotope.layout();
+                    });
                 });
             });
 
             /*
-                ANIMACJA WYSZUKIWARKI
+                ANIMACJA WYSZUKIWARKI ( Starałem się używać Vanilla JS bo nie byłem pewien czy można JQuery ;) )
             */
-            var searchButton = document.getElementById('searchButton');
+            const searchButton = document.getElementById('searchButton');
             let searchClicked = false;
 
-            var inputBox = document.getElementById('searchInput');
+            const inputBox = document.getElementById('searchInput');
 
             searchButton.addEventListener('click', function handleClick() {
                 if ( !searchClicked ) {
@@ -329,9 +337,6 @@
                     //inputBox.classList.add('searchbox-open');
                     inputBox.style.display = "inline-block";
                     inputBox.style.animation = "openSearch 0.2s linear 1";
-                    setTimeout( function() {
-                        inputBox.style.width = '80%';
-                    }, 200);
                 } else {
                     searchClicked = false;
                     //inputBox.classList.remove('searchbox-open');
@@ -342,10 +347,6 @@
                 }
             });
         </script>
-
-
-
-
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
