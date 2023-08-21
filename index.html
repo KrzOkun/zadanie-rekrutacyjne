@@ -292,6 +292,11 @@
                     isotope.layout();
                 });
 
+                document.addEventListener("load", function() {
+                    isotope.reloadItems();
+                    isotope.layout();
+                });
+
                 var lightbox = new SimpleLightbox('.grid-item');
 
                 var expandButton = document.getElementById("rozwin");
