@@ -20,7 +20,6 @@
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
         <script src="js/simple-lightbox.min.js"></script>
-
     </head>
     <body>
         <nav id="navbar" class="navbar px-7 mb-3">
@@ -57,49 +56,58 @@
             </ul>
         </nav>
         <div class="container-fluid p-0">
-            
             <!-- 
-                Sekcja intro <Slider>
+                SEKCJA INTRO
             -->
-            
             <section id="intro" class="text-black" style="background-color: rgb(220,193,171);">
                 <div class="row">
                     <!-- 
                         Intro informacje
                     -->
                     <div class="col d-flex text-center flex-column justify-content-center align-items-center">
-                        <div class="display-2 mb-xl-5"><b>Nowoczesna aranżacja Twojego ogrodu</b></div>
+                        <div class="display-2 mb-xl-5 text-start px-5"><b>Nowoczesna aranżacja Twojego ogrodu</b></div>
                         <p class="display-7">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
                         <div class="row container">
-                            <button type="button" class="btn btn-primary mx-5 my-1 col green-white display-6 rounded-5 w-auto">Skontaktuj się z nami</button>
-                            <button type="button" class="btn btn-primary mx-5 my-1 col greenborder display-6 rounded-5">Zobacz nasze realizacje <i class="bi bi-arrow-down"></i></button>
+                            <a href="#kontakt" class="btn btn-primary btn-intro mx-5 my-1 col green-white display-6 rounded-5 w-auto">Skontaktuj się z nami</a>
+                            <a href="#realizacje" class="btn btn-primary btn-intro mx-5 my-1 col greenborder display-6 rounded-5">Zobacz nasze realizacje <i class="bi bi-arrow-down"></i></a>
                         </div>
                     </div>
                     <!-- 
                         Intro slajder
                     -->
                     <div class="col overflow-hidden">
-                        <div class="carousel-container carousel slide" data-bs-ride="carousel" id="gardencarousel">
+                        <div class="carousel slide carousel-container" data-bs-ride="carousel" id="gardencarousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item carousel-image active">
-                                    <img src="img/intro/bridge_1920.jpg" class="img-outside"/>
+                                    <img src="img/intro/bridge_1920_n.jpg" class="img-outside" style="max-height: 1000px;" />
                                 </div>
                                 <div class="carousel-item carousel-image">
-                                    <img src="img/intro/cosmos_1920.jpg" class="img-outside"/>
+                                    <img src="img/intro/cosmos_1920.jpg" class="img-outside" style="max-height: 1000px;"/>
                                 </div>
                                 <div class="carousel-item carousel-image">
-                                    <img src="img/intro/garden_1920.jpg" class="img-outside"/>
+                                    <img src="img/intro/garden_1920.jpg" class="img-outside" style="max-height: 1000px;"/>
                                 </div>
                             </div>
-                            
-                            <div class="slaidNav position-relative">
+                            <div class="milky-color position-absolute bottom-0 end-0">
+                                <button class="border-0 p-5 slideNav" type="button" data-bs-target="#gardencarousel" data-bs-slide="prev">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.795115 10.9393C0.209328 11.5251 0.209328 12.4749 0.795114 13.0607L10.3411 22.6066C10.9268 23.1924 11.8766 23.1924 12.4624 22.6066C13.0482 22.0208 13.0482 21.0711 12.4624 20.4853L3.97709 12L12.4624 3.51472C13.0482 2.92893 13.0482 1.97918 12.4624 1.3934C11.8766 0.80761 10.9268 0.80761 10.3411 1.3934L0.795115 10.9393ZM26.1442 10.5L1.85577 10.5L1.85577 13.5L26.1442 13.5L26.1442 10.5Z" fill="black"/>
+                                    </svg>
+                                </button>
+                                <button class="border-0 p-5 slideNav" type="button" data-bs-target="#gardencarousel" data-bs-slide="right">
+                                    <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M26.2049 13.0607C26.7907 12.4749 26.7907 11.5251 26.2049 10.9393L16.6589 1.3934C16.0732 0.807611 15.1234 0.807611 14.5376 1.3934C13.9518 1.97919 13.9518 2.92893 14.5376 3.51472L23.0229 12L14.5376 20.4853C13.9518 21.0711 13.9518 22.0208 14.5376 22.6066C15.1234 23.1924 16.0732 23.1924 16.6589 22.6066L26.2049 13.0607ZM0.855774 13.5H25.1442V10.5H0.855774V13.5Z" fill="black"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--div class="slaidNav position-relative bg-danger h-50">
                                 <button class="carousel-control-prev" type="button" data-bs-target="#gardencarousel" data-bs-slide="prev">
                                     <span class="bi bi-arrow-left" aria-hidden="true"></span>
                                 </button>
                                 <button class="carousel-control-next" type="button" data-bs-target="#gardencarousel" data-bs-slide="right">
                                     <span class="bi bi-arrow-right" aria-hidden="true"></span>
                                 </button>
-                            </div>
+                            </div-->
                         </div>
                     </div>
                   </div>
@@ -107,20 +115,20 @@
             
             <section id="oferta">
                 <div class="container py-5">
-                    <div clas="row w-50">
-                        <small class="text-sm display-6" style="color: green;">Oferta</small>
+                    <div clas="row row-cols-8">
+                        <div class="text-sm display-7 text-g" style="color: green;">Oferta</div>
                         <p class="display-2"><b>Działamy <i>kompleksowo</i></b></p>
                         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.</p>
                     </div>
-                    <div class="row row-cols-2 d-inline-flex">
+                    <div class="row row-cols-4 d-inline-flex">
                         <div class="card col me-5" style="width: 18rem;">
-                            <img src="img/icons/pencil.png" class="card-img-top icon-offer" alt="...">
+                            <img src="img/icons/pencil.png" class="card-img-top icon-offer mt-5 ms-3" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title display-6">Projekty</h5>
+                                <h5 class="card-title display-6-5">Projekty</h5>
                                 <p class="card-text">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="card-link">Dowiedz się więcej 
+                                <a href="#" class="card-link link-offset-3">Dowiedz się więcej 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                     </svg>
@@ -128,13 +136,13 @@
                             </div>
                         </div>
                         <div class="card col me-5" style="width: 18rem;">
-                            <img src="img/icons/eye.png" class="card-img-top icon-offer" alt="...">
+                            <img src="img/icons/eye.png" class="card-img-top icon-offer mt-5 ms-3" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title display-6">Wizualizacje</h5>
+                                <h5 class="card-title display-6-5">Wizualizacje</h5>
                                 <p class="card-text">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="card-link">Dowiedz się więcej 
+                                <a href="#" class="card-link link-offset-3">Dowiedz się więcej 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                     </svg>
@@ -142,13 +150,13 @@
                             </div>
                         </div>
                         <div class="card col" style="width: 18rem;">
-                            <img src="img/icons/stars.png" class="card-img-top icon-offer" alt="...">
+                            <img src="img/icons/stars.png" class="card-img-top icon-offer mt-5 ms-3 stars" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title display-6">Realizacje</h5>
+                                <h5 class="card-title display-6-5">Realizacje</h5>
                                 <p class="card-text">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="card-link">Dowiedz się więcej 
+                                <a href="#" class="card-link link-offset-3">Dowiedz się więcej 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
                                     </svg>
@@ -161,16 +169,20 @@
 
             <section id="ofirmie">
                 <div class="row">
-                    <div class="col">
-                        <img src="img/intro/bridge_1920.jpg" class="img-fluid" />
+                    <div class="col position-relative">
+                        <img src="img/intro/bridge_1920_n.jpg" class="img-fluid" />
                     </div>
 
                     <div class="col col-sm-7">
-                        <small class="text-sm display-6" style="color: white;">O firmie</small>
-                        <div class="display-2 mb-xl-5"><b>Tworzymy z pasją</b></div>
-                        <p class="display-6 mb-xl-5">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+                        <div class="text-sm display-7 text-white">O firmie</div>
+                        <div class="display-2 mb-xl-5 text-white"><b>Tworzymy z pasją</b></div>
+                        <p class="display-7 mb-xl-5 text-white">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
                         <div class="row container">
-                            <button type="button" class="btn btn-primary mx-5 my-1 col border border-white bg-transparent display-6 rounded-5 w-auto">Poznaj nas bliżej</button>
+                            <button type="button" class="btn btn-primary mx-5 my-1 col border border-white bg-transparent display-6 rounded-5 w-100">Poznaj nas bliżej
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                                    </svg>
+                            </button>
                         </div>
                     </div>
                   </div>
@@ -179,9 +191,9 @@
                 SEKCJA REALIZACJE
             -->
             <section id="realizacje" style="background-color: rgb(220,193,171);">
-                <small style="color: green;">Realizacje</small>
-                <div class="display-2 mb-xl-5">Nasze <b><i>projekty</i></b></div>
-                <div id="isotope-grid" class="container-fluid">
+                <div class="display-7 mx-5 pt-5" style="color: green;">Realizacje</div>
+                <div class="display-2 mb-xl-5 pb-5 px-5">Nasze <b><i>projekty</i></b></div>
+                <div id="isotope-grid" class="container col-md-12 w-100">
                     <div class="grid-item grid-item--height2" href="img/gallery/Photo_1.png"><img src="img/gallery/Photo_1.png" class="img-fluid"/></div>
                     <div class="grid-item" href="img/gallery/Photo_2.png"><img src="img/gallery/Photo_2.png" class="img-fluid"/></div>
                     <div class="grid-item grid-item--height2" href="img/gallery/Photo_3.png"><img src="img/gallery/Photo_3.png" class="img-fluid"/></div>
@@ -191,14 +203,18 @@
                     <div class="grid-item grid-item--height2" href="img/gallery/Photo_7.png"><img src="img/gallery/Photo_7.png" class="img-fluid"/></div>
                     <div class="grid-item" href="img/gallery/Photo_8.png"><img src="img/gallery/Photo_8.png" class="img-fluid"/></div>
                     <div class="grid-item" href="img/gallery/Photo_9.png"><img src="img/gallery/Photo_9.png" class="img-fluid"/></div>
+
+                    <div class="position-absolute bottom-0 start-25-c">
+                        <button type="button" class="btn btn-primary btn-intro mx-5 my-1 col border-black display-6 rounded-5 text-black bg-transparent" id="rozwin">Rozwiń <i class="bi bi-arrow-down"></i></button>
+                    </div>
                 </div>
             </section>
             <!--
                 SEKCJA KONTAKT
             -->
             <section id="kontakt" >
-                <div class="row container p-5" style="background-color: #1B5B31;">
-                    <div class="col d-flex flex-wrap text-light text-wrap display-5 text-center p-5 w-100">
+                <div class="row container p-5 m-md-5" style="background-color: #1B5B31;">
+                    <div class="col d-flex flex-wrap text-light text-wrap display-5 text-center p-5 align-items-center justify-content-center">
                         <p class="">Zostańmy w kontakcie!</p>
                         <p>Znajdziesz nas na <b><i>Instagramie</i></b>.</p>
                     </div>
@@ -261,13 +277,14 @@
 
           
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
+            document.addEventListener("load", function() {
                 // Inicjalizacja Isotope
                 var isoContainer = document.getElementById("isotope-grid");
                 var isotope = new Isotope(isoContainer, {
                     itemSelector: '.grid-item',
                     masonry: {
                         columnWidth: 0,
+                        rowHeight: 100,
                     }
                 });
                 isotope.layout();
@@ -276,7 +293,23 @@
                 });
 
                 var lightbox = new SimpleLightbox('.grid-item');
+
+                var expandButton = document.getElementById("rozwin");
+                expandButton.addEventListener("click", function() {
+                    var newItemsHTML = `
+                    <div class="grid-item" href="img/gallery/Photo_9.png"><img src="img/gallery/Photo_9.png" alt="Nowa Realizacja 1" class="img-fluid"></div>
+                    <div class="grid-item" href="img/gallery/Photo_9.png"><img src="img/gallery/Photo_9.png" alt="Nowa Realizacja 2" class="img-fluid"></div>
+                    `;
+
+                    isoContainer.insertAdjacentHTML("beforeend", newItemsHTML);
+
+                    var newItems = isoContainer.querySelectorAll(".grid-item");
+                    isotope.appended(newItems);
+                    isotope.reloadItems();
+                    isotope.layout();
+                });
             });
+
             /*
                 ANIMACJA WYSZUKIWARKI
             */
